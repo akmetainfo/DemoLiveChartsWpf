@@ -7,20 +7,15 @@ namespace WpfApp1
 {
     public class GraphData
     {
-        public SeriesCollection SeriesCollection { set; get; }
+        public SeriesCollection SeriesCollection => this.LoadData();
 
-        public GraphData()
-        {
-            this.LoadData();
-        }
-
-        private void LoadData()
+        private SeriesCollection LoadData()
         {
             const int reportId = 16;
 
             var data = this.LoadDataFromServer(reportId);
 
-            this.SeriesCollection = new SeriesCollection
+            return new SeriesCollection
             {
                 new LineSeries
                 {
