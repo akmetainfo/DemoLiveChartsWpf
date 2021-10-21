@@ -3,7 +3,7 @@ using System.Linq;
 using LiveCharts;
 using LiveCharts.Wpf;
 
-namespace WpfApp1
+namespace WpfApp1.Chart
 {
     public class GraphData
     {
